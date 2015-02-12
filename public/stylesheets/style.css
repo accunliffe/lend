@@ -10,18 +10,37 @@
   width: 100%;
 }
 .bgc-blue-500.topper {
-  height: 500px;
+  height: 300px;
+  z-index: 0;
+  text-align: center;
+}
+.bgc-green-500.topper {
+  height: 300px;
   z-index: 0;
   text-align: center;
 }
 .bgc-red-300.topper {
-  height: 500px;
+  height: 300px;
   z-index: 0;
   text-align: center;
 }
-button.btn.btn--xl.btn--white.btn--raised.fiindLender {
+.bgc-white.topper.animate-show {
+  height: 300px;
+}
+button.btn.btn--xl.btn--white.btn--raised.findLender {
   z-index: 0 !important;
-  margin: 400px 0 0 0;
+  margin: 150px 50px 0 50px;
+}
+button.btn.btn--xl.btn--white.btn--raised.steps {
+  z-index: 0 !important;
+  margin: 80px 50px 0 50px;
+}
+button.btn.btn--xl.btn--white.btn--raised.lenderResults {
+  z-index: 0 !important;
+  margin: 80px 50px 0 50px;
+}
+.text-field__label {
+  color: #000 !important;
 }
 .animate-show {
   line-height: 20px;
@@ -30,13 +49,13 @@ button.btn.btn--xl.btn--white.btn--raised.fiindLender {
   border: 1px solid #000;
   background: #fff;
 }
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
 .animate-show.ng-hide {
   line-height: 0;
   opacity: 0;
   padding: 0 10px;
-}
-.animate-show.ng-hide-add.ng-hide-add-active,
-.animate-show.ng-hide-remove.ng-hide-remove-active {
-  -webkit-transition: all linear 3.5s;
-  transition: all linear 3.5s;
 }
