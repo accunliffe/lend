@@ -1,0 +1,56 @@
+extends layout
+
+block content
+  .card.top
+      .toolbar        
+        span.toolbar__label.fs-title Brand Name
+        .toolbar__right
+          lx-dropdown(position='right', from-top='')
+            button.btn.btn--l.btn--black.btn--icon(lx-ripple='', lx-dropdown-toggle='')
+              i.mdi.mdi-menu
+            lx-dropdown-menu
+              ul
+                li
+                  a.dropdown-link Action
+                li
+                  a.dropdown-link Another action
+                li
+                  a.dropdown-link Something else here
+                li.dropdown-divider
+                li
+                  a.dropdown-link.dropdown-link--is-header Header
+                li
+                  a.dropdown-link Separated link
+  .tc-white-1(flex-container='row')"]
+      div(flex-item='12')
+        .bgc-blue-500.topper(class='p+')
+          .mb
+            button.btn.btn--xl.btn--white.btn--raised.fiindLender(lx-ripple='', ng-click='clicked=!clicked') Button
+        .bgc-red-300.topper.animate-show(flex-container='row', class='p+', ng-show='clicked')
+          div(flex-item='5')
+            form
+              lx-text-field(label='First name', fixed-label='true')
+                input(type='text', ng-model='textFields.fixedFirstName2')
+              lx-text-field(label='Last name', fixed-label='true')
+                input(type='text', ng-model='textFields.fixedLastName2')
+              lx-text-field(label='Email', fixed-label='true')
+                input(type='email', ng-model='textFields.fixedEmail2')
+              lx-text-field(label='Address', fixed-label='true')
+                input(type='text', ng-model='textFields.fixedAdress2')
+          div(flex-item='5')
+            form
+              lx-text-field(label='First and last name', fixed-label='true', icon='account')
+                input(type='text', ng-model='textFields.fixedFirstName')
+              lx-text-field(label='Phone number', fixed-label='true', icon='phone')
+                input(type='text', ng-model='textFields.fixedLastName')
+              lx-text-field(label='Email address', fixed-label='true', icon='email')
+                input(type='email', ng-model='textFields.fixedEmail')
+              lx-text-field(label='Location', fixed-label='true', icon='city')
+                input(type='text', ng-model='textFields.fixedAdress')
+
+  script(src='bower_components/jquery/dist/jquery.js')
+  script(src='bower_components/velocity/velocity.js')
+  script(src='bower_components/moment/min/moment-with-locales.js')
+  script(src='bower_components/angular/angular.js')
+  script(src='bower_components/lumx/dist/lumx.js')
+  script(src='javascripts/app.js')
