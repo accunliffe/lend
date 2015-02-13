@@ -33,7 +33,7 @@ block content
               .toolbar        
                 span.toolbar__label.fs-title Personal Info
                 .toolbar__right
-                  button.btn.btn--l.btn--black.btn--icon(lx-ripple='', ng-click='section1=!section1')
+                  button.btn.btn--l.btn--black.btn--icon.formy(lx-ripple='', ng-click='section1=!section1')
                     i.mdi.mdi-plus
               form(ng-show='section1')
                 lx-text-field.black(label='First name', fixed-label='true')
@@ -50,7 +50,7 @@ block content
               .toolbar        
                 span.toolbar__label.fs-title Biz Info
                 .toolbar__right
-                  button.btn.btn--l.btn--black.btn--icon(lx-ripple='', ng-click='section2=!section2')
+                  button.btn.btn--l.btn--black.btn--icon.formy(lx-ripple='', ng-click='section2=!section2')
                     i.mdi.mdi-plus
               form(ng-show='section2')
                 lx-text-field.black(label='First and last name', fixed-label='true', icon='account')
@@ -67,7 +67,7 @@ block content
               .toolbar        
                 span.toolbar__label.fs-title Other Info
                 .toolbar__right
-                  button.btn.btn--l.btn--black.btn--icon(lx-ripple='', ng-click='section3=!section3')
+                  button.btn.btn--l.btn--black.btn--icon.formy(lx-ripple='', ng-click='section3=!section3')
                     i.mdi.mdi-plus
               form(ng-show='section3')
                 lx-text-field.black(label='First name', fixed-label='true')
