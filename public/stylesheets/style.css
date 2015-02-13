@@ -38,6 +38,12 @@
   height: 400px;
   color: #fff;
 }
+.bgc-green-500.topper.animate-show {
+  text-align: center;
+  border: none;
+  height: 400px;
+  color: #fff;
+}
 h1.topper {
   margin: 100px 0 0 0;
 }
@@ -48,9 +54,9 @@ button.btn.btn--xl.btn--white.btn--raised.findLender {
   z-index: 0 !important;
   margin: 50px auto 0 auto;
 }
-button.btn.btn--xl.btn--white.btn--raised.steps {
+button.btn.btn--m.btn--white.btn--raised.steps {
   z-index: 0 !important;
-  margin: 80px 50px 0 50px;
+  margin: 80px 10px 0 10px;
 }
 button.btn.btn--xl.btn--white.btn--raised.lenderResults {
   z-index: 0 !important;
