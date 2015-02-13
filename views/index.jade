@@ -21,55 +21,71 @@ block content
                   a.dropdown-link.dropdown-link--is-header Header
                 li
                   a.dropdown-link Separated link
-  .tc-white-1(flex-container='row')"]
+  .tc-white-1(flex-container='column')"]
       div(flex-item='12')
         .bgc-blue-500.topper(class='p+')
+          h1.topper Hit "Get Started"
           .mb
-            button.btn.btn--xl.btn--white.btn--raised.findLender(lx-ripple='', ng-click='clicked=!clicked') Find My Lender
-        .bgc-yellow-500.topper.animate-show(flex-container='row', class='p+', ng-show='clicked')
-          div(flex-item='4')
-            form
-              lx-text-field.black(label='First name', fixed-label='true')
-                input(type='text', ng-model='textFields.fixedFirstName2')
-              lx-text-field.black(label='Last name', fixed-label='true')
-                input(type='text', ng-model='textFields.fixedLastName2')
-              lx-text-field.black(label='Email', fixed-label='true')
-                input(type='email', ng-model='textFields.fixedEmail2')
-              lx-text-field.black(label='Address', fixed-label='true')
-                input(type='text', ng-model='textFields.fixedAdress2')
-          div(flex-item='4')
-            form
-              lx-text-field.black(label='First and last name', fixed-label='true', icon='account')
-                input(type='text', ng-model='textFields.fixedFirstName')
-              lx-text-field.black(label='Phone number', fixed-label='true', icon='phone')
-                input(type='text', ng-model='textFields.fixedLastName')
-              lx-text-field.black(label='Email address', fixed-label='true', icon='email')
-                input(type='email', ng-model='textFields.fixedEmail')
-              lx-text-field.black(label='Location', fixed-label='true', icon='city')
-                input(type='text', ng-model='textFields.fixedAdress')
-          .mb(flex-item='4')
-            button.btn.btn--xl.btn--white.btn--raised.lenderResults(lx-ripple='', ng-click='lenderResults=!lenderResults') Lender Results
+            button.btn.btn--xl.btn--white.btn--raised.findLender(lx-ripple='', ng-click='clicked=!clicked') Get Started
+        .bgc-white.topper.animate-show(flex-container='row', class='p+', ng-show='clicked')
+          .bgc-white(flex-container='row', flex-item='12', class='p+')
+            div(flex-item='12')
+              .toolbar        
+                span.toolbar__label.fs-title Personal Info
+                .toolbar__right
+                  button.btn.btn--l.btn--black.btn--icon(lx-ripple='', ng-click='section1=!section1')
+                    i.mdi.mdi-plus
+              form(ng-show='section1')
+                lx-text-field.black(label='First name', fixed-label='true')
+                  input(type='text', ng-model='textFields.fixedFirstName2')
+                lx-text-field.black(label='Last name', fixed-label='true')
+                  input(type='text', ng-model='textFields.fixedLastName2')
+                lx-text-field.black(label='Email', fixed-label='true')
+                  input(type='email', ng-model='textFields.fixedEmail2')
+                lx-text-field.black(label='Address', fixed-label='true')
+                  input(type='text', ng-model='textFields.fixedAdress2')
+        .bgc-white.topper.animate-show(flex-container='row', class='p+', ng-show='clicked')
+          .bgc-white(flex-container='row', flex-item='12', class='p+')  
+            div(flex-item='12')
+              .toolbar        
+                span.toolbar__label.fs-title Biz Info
+                .toolbar__right
+                  button.btn.btn--l.btn--black.btn--icon(lx-ripple='', ng-click='section2=!section2')
+                    i.mdi.mdi-plus
+              form(ng-show='section2')
+                lx-text-field.black(label='First and last name', fixed-label='true', icon='account')
+                  input(type='text', ng-model='textFields.fixedFirstName')
+                lx-text-field.black(label='Phone number', fixed-label='true', icon='phone')
+                  input(type='text', ng-model='textFields.fixedLastName')
+                lx-text-field.black(label='Email address', fixed-label='true', icon='email')
+                  input(type='email', ng-model='textFields.fixedEmail')
+                lx-text-field.black(label='Location', fixed-label='true', icon='city')
+                  input(type='text', ng-model='textFields.fixedAdress')
+        .bgc-white.topper.animate-show(flex-container='row', class='p+', ng-show='clicked')
+          .bgc-white(flex-container='row', flex-item='12', class='p+')
+            div(flex-item='12')
+              .toolbar        
+                span.toolbar__label.fs-title Other Info
+                .toolbar__right
+                  button.btn.btn--l.btn--black.btn--icon(lx-ripple='', ng-click='section3=!section3')
+                    i.mdi.mdi-plus
+              form(ng-show='section3')
+                lx-text-field.black(label='First name', fixed-label='true')
+                  input(type='text', ng-model='textFields.fixedFirstName2')
+                lx-text-field.black(label='Last name', fixed-label='true')
+                  input(type='text', ng-model='textFields.fixedLastName2')
+                lx-text-field.black(label='Email', fixed-label='true')
+                  input(type='email', ng-model='textFields.fixedEmail2')
+                lx-text-field.black(label='Click in Here to display matches', fixed-label='true')
+                  input(type='text', ng-model='textFields.fixedAdress2', ng-click='lastField=!lastField')
+        .bgc-white.topper.animate-show(flex-item='12', class='p+', ng-show='lastField')
+          .bgc-blue-500.center(flex-item='12', class='p+')
+            .mb  
+              button.btn.btn--m.btn--white.btn--raised.lendy(lx-ripple='', ng-click='lenderResults=!lenderResults') Find My Lendy
         .bgc-red-200.topper.animate-show(flex-container='row', class='p+', ng-show='lenderResults')
-          div(flex-item='5')
-            form
-              lx-text-field.black(label='Lender', fixed-label='true')
-                input(type='text', ng-model='textFields.fixedFirstName2')
-              lx-text-field.black(label='Last name', fixed-label='true')
-                input(type='text', ng-model='textFields.fixedLastName2')
-              lx-text-field.black(label='Email', fixed-label='true')
-                input(type='email', ng-model='textFields.fixedEmail2')
-              lx-text-field.black(label='Address', fixed-label='true')
-                input(type='text', ng-model='textFields.fixedAdress2')
-          div(flex-item='5')
-            form
-              lx-text-field.black(label='Lender Results', fixed-label='true', icon='account')
-                input(type='text', ng-model='textFields.fixedFirstName')
-              lx-text-field.black(label='Phone number', fixed-label='true', icon='phone')
-                input(type='text', ng-model='textFields.fixedLastName')
-              lx-text-field.black(label='Email address', fixed-label='true', icon='email')
-                input(type='email', ng-model='textFields.fixedEmail')
-              lx-text-field.black(label='Location', fixed-label='true', icon='city')
-                input(type='text', ng-model='textFields.fixedAdress')
+          div(flex-item='4') Lendy 1            
+          div(flex-item='4') Lendy 2
+          div(flex-item='4') Lendy 3
         .bgc-green-500.topper(class='p+')
           .mb
             button.btn.btn--xl.btn--white.btn--raised.steps(lx-ripple='') Step 1
