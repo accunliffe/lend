@@ -1,1 +1,1 @@
-angular.module('lendEr', ['lumx']);
+angular.module('lendEr', ['lumx', 'ngAnimate',]);
