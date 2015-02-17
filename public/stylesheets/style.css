@@ -2,7 +2,7 @@
   clear: both;
 }
 .bodywrapper {
-  height: 3000px;
+  height: auto;
   width: 100%;
   margin: 0 0 0 0;
   padding: 0 0 0 0;
@@ -57,13 +57,13 @@
 .bgc-white.topper.animate-show#formbottom {
   padding: 0 0 60px 0 !important;
 }
-.bgc-blue-500.center {
+.bgc-white.center {
   text-align: center;
 }
 .bgc-red-200.topper.animate-show {
   text-align: center;
   border: none;
-  height: 400px;
+  height: 200px;
   color: #fff;
 }
 .bgc-green-500.topper.animate-show {
@@ -152,6 +152,6 @@ span.toolbar__label.fs-title.center {
 }
 @media screen and (min-width: 1920px) {
   .formWrapper {
-    height: 42.5%;
+    height: 20%;
   }
 }

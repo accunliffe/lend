@@ -88,15 +88,16 @@ block content
                   lx-text-field.black(label='Email', fixed-label='true')
                     input.black(type='email', ng-model='textFields.fixedEmail2')
                   lx-text-field.black(label='Click in Here to display matches', fixed-label='true')
-                    input.black(type='text', ng-model='textFields.fixedAdress2', ng-click='lastField=!lastField')
-        .bgc-white.topper.animate-show(flex-item='12', class='p+', ng-show='lastField')
-          .bgc-blue-500.center(flex-item='12', class='p+')
+                    input.black(type='text', ng-model='textFields.fixedAdress2')
+        .bgc-white.topper.animate-show(flex-item='12', class='p+')
+          .bgc-white.center(flex-item='12', class='p+')
             .mb  
-              button.btn.btn--m.btn--white.btn--raised.lendy(lx-ripple='', ng-click='lenderResults=!lenderResults') Find My Lendy
-      .bgc-red-200.topper.animate-show(flex-container='row', class='p+', ng-show='lenderResults')
-        div(flex-item='4') Lendy 1            
-        div(flex-item='4') Lendy 2
-        div(flex-item='4') Lendy 3
+              button.btn.btn--m.btn--blue.btn--raised.lendy(lx-ripple='', ng-click='lenderResults=!lenderResults') Find My Lendy
+      .cssSlideUp(ng-show='lenderResults', ng-cloak='')
+        .bgc-red-200.topper.animate-show(flex-container='row', class='p+')
+          div(flex-item='4') Lendy 1            
+          div(flex-item='4') Lendy 2
+          div(flex-item='4') Lendy 3
       .bgc-green-500.topper.animate-show(3flex-container='row', class='p+',)
         button.btn.btn--m.btn--white.btn--raised.steps(lx-ripple='') Step 1
         button.btn.btn--m.btn--white.btn--raised.steps(lx-ripple='') Step 2
