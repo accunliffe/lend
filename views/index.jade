@@ -2,12 +2,12 @@ extends layout
 
 block content
   .bodywrapper
-    .card.top
+    .card.bgc-green-500.top
         .toolbar        
           span.toolbar__label.fs-title Brand Name
           .toolbar__right
             lx-dropdown(position='right', from-top='')
-              button.btn.btn--l.btn--black.btn--icon(lx-ripple='', lx-dropdown-toggle='')
+              button.btn.btn--l.btn--white.btn--icon(lx-ripple='', lx-dropdown-toggle='')
                 i.mdi.mdi-menu
               lx-dropdown-menu
                 ul
@@ -36,7 +36,7 @@ block content
           .bgc-white(flex-container='row', flex-item='12', class='p+')
             div(flex-item='12')
               .toolbar        
-                span.toolbar__label.fs-title Personal Info
+                span.toolbar__label.fs-title.former Personal Info
                 .toolbar__right
                   button.btn.btn--l.btn--black.btn--icon.formy(lx-ripple='', ng-click='section1=!section1')
                     i.mdi.mdi-plus(ng-hide='section1')
@@ -55,7 +55,7 @@ block content
           .bgc-white(flex-container='row', flex-item='12', class='p+')  
             div(flex-item='12')
               .toolbar        
-                span.toolbar__label.fs-title Biz Info
+                span.toolbar__label.fs-title.former Biz Info
                 .toolbar__right
                   button.btn.btn--l.btn--black.btn--icon.formy(lx-ripple='', ng-click='section2=!section2')
                     i.mdi.mdi-plus(ng-hide='section2')
@@ -74,7 +74,7 @@ block content
           .bgc-white(flex-container='row', flex-item='12', class='p+')
             div(flex-item='12')
               .toolbar        
-                span.toolbar__label.fs-title Other Info
+                span.toolbar__label.fs-title.former Other Info
                 .toolbar__right
                   button.btn.btn--l.btn--black.btn--icon.formy(lx-ripple='', ng-click='section3=!section3')
                     i.mdi.mdi-plus(ng-hide='section3')

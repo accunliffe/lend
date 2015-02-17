@@ -81,6 +81,9 @@ h1.topper {
   }
 }
 span.toolbar__label.fs-title {
+  color: #fff;
+}
+span.toolbar__label.fs-title.former {
   color: #000;
 }
 button.btn.btn--xl.btn--white.btn--raised.findLender {
