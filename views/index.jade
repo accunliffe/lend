@@ -22,84 +22,98 @@ block content
                     a.dropdown-link.dropdown-link--is-header Header
                   li
                     a.dropdown-link Separated link
-    .tc-white-1.mainContent(flex-container='column', flex-item='12')
-      .bgc-green-500.topper(class='p+')
-            h1.topper Paring business with loans
-          .bgc-blue-500.topper(class='p+')
-            h1.topper Hit "Get Started"
-            .mb
-              button.btn.btn--xl.btn--white.btn--raised.findLender(lx-ripple='', ng-click='clicked=!clicked') Get Started
-          .bgc-white.topper.animate-show(flex-container='row', class='p+', ng-show='clicked')
-            .bgc-white(flex-container='row', flex-item='12', class='p+')
-              div(flex-item='12')
-                .toolbar        
-                  span.toolbar__label.fs-title Personal Info
-                  .toolbar__right
-                    button.btn.btn--l.btn--black.btn--icon.formy(lx-ripple='', ng-click='section1=!section1')
-                      i.mdi.mdi-plus(ng-hide='section1')
-                      i.mdi.mdi-minus(ng-show='section1')
-                form(ng-show='section1')
+    .tc-white-1.mainContent(flex-container='column', flex-item='12', role='navigation')
+      .bgc-green-500.topper#somethingElse(class='p+')
+        h1.topper Paring business with loans
+        a(href='#getStarted', data-id='div1')
+          button.btn.btn--xl.btn--white.btn--raised.findLender(lx-ripple='') Learn More
+      .bgc-blue-500.topper#getStarted(class='p+')
+        h1.topper Hit "Get Started"
+        a(href='#formDiv', data-id='div2')
+          button.btn.btn--xl.btn--white.btn--raised.findLender(lx-ripple='', ng-click='clicked=!clicked') Get Started
+      .formWrapper.clear(ng-show='clicked')
+        .bgc-white.topper.animate-show.clear#formDiv(flex-container='row', class='p+')
+          .bgc-white(flex-container='row', flex-item='12', class='p+')
+            div(flex-item='12')
+              .toolbar        
+                span.toolbar__label.fs-title Personal Info
+                .toolbar__right
+                  button.btn.btn--l.btn--black.btn--icon.formy(lx-ripple='', ng-click='section1=!section1')
+                    i.mdi.mdi-plus(ng-hide='section1')
+                    i.mdi.mdi-minus(ng-show='section1')
+              .cssSlideUp(ng-show='section1')  
+                form
                   lx-text-field.black(label='First name', fixed-label='true')
-                    input(type='text', ng-model='textFields.fixedFirstName2')
+                    input.black(type='text', ng-model='textFields.fixedFirstName1')
                   lx-text-field.black(label='Last name', fixed-label='true')
-                    input(type='text', ng-model='textFields.fixedLastName2')
+                    input.black(type='text', ng-model='textFields.fixedLastName1')
                   lx-text-field.black(label='Email', fixed-label='true')
-                    input(type='email', ng-model='textFields.fixedEmail2')
+                    input.black(type='email', ng-model='textFields.fixedEmail1')
                   lx-text-field.black(label='Address', fixed-label='true')
-                    input(type='text', ng-model='textFields.fixedAdress2')
-          .bgc-white.topper.animate-show(flex-container='row', class='p+', ng-show='clicked')
-            .bgc-white(flex-container='row', flex-item='12', class='p+')  
-              div(flex-item='12')
-                .toolbar        
-                  span.toolbar__label.fs-title Biz Info
-                  .toolbar__right
-                    button.btn.btn--l.btn--black.btn--icon.formy(lx-ripple='', ng-click='section2=!section2')
-                      i.mdi.mdi-plus(ng-hide='section2')
-                      i.mdi.mdi-minus(ng-show='section2')
-                form(ng-show='section2')
+                    input.black(type='text', ng-model='textFields.fixedAdress1')
+        .bgc-white.topper.animate-show(flex-container='row', class='p+')
+          .bgc-white(flex-container='row', flex-item='12', class='p+')  
+            div(flex-item='12')
+              .toolbar        
+                span.toolbar__label.fs-title Biz Info
+                .toolbar__right
+                  button.btn.btn--l.btn--black.btn--icon.formy(lx-ripple='', ng-click='section2=!section2')
+                    i.mdi.mdi-plus(ng-hide='section2')
+                    i.mdi.mdi-minus(ng-show='section2')
+              .cssSlideUp(ng-show='section2')  
+                form
                   lx-text-field.black(label='First and last name', fixed-label='true', icon='account')
-                    input(type='text', ng-model='textFields.fixedFirstName')
+                    input.black(type='text', ng-model='textFields.fixedFirstName')
                   lx-text-field.black(label='Phone number', fixed-label='true', icon='phone')
-                    input(type='text', ng-model='textFields.fixedLastName')
+                    input.black(type='text', ng-model='textFields.fixedLastName')
                   lx-text-field.black(label='Email address', fixed-label='true', icon='email')
-                    input(type='email', ng-model='textFields.fixedEmail')
+                    input.black(type='email', ng-model='textFields.fixedEmail')
                   lx-text-field.black(label='Location', fixed-label='true', icon='city')
-                    input(type='text', ng-model='textFields.fixedAdress')
-          .bgc-white.topper.animate-show(flex-container='row', class='p+', ng-show='clicked')
-            .bgc-white(flex-container='row', flex-item='12', class='p+')
-              div(flex-item='12')
-                .toolbar        
-                  span.toolbar__label.fs-title Other Info
-                  .toolbar__right
-                    button.btn.btn--l.btn--black.btn--icon.formy(lx-ripple='', ng-click='section3=!section3')
-                      i.mdi.mdi-plus(ng-hide='section3')
-                      i.mdi.mdi-minus(ng-show='section3')
-                form(ng-show='section3')
+                    input.black(type='text', ng-model='textFields.fixedAdress')
+        .bgc-white.topper.animate-show#formbottom(flex-container='row', class='p+')
+          .bgc-white(flex-container='row', flex-item='12', class='p+')
+            div(flex-item='12')
+              .toolbar        
+                span.toolbar__label.fs-title Other Info
+                .toolbar__right
+                  button.btn.btn--l.btn--black.btn--icon.formy(lx-ripple='', ng-click='section3=!section3')
+                    i.mdi.mdi-plus(ng-hide='section3')
+                    i.mdi.mdi-minus(ng-show='section3')
+              .cssSlideUp(ng-show='section3')  
+                form
                   lx-text-field.black(label='First name', fixed-label='true')
-                    input(type='text', ng-model='textFields.fixedFirstName2')
+                    input.black(type='text', ng-model='textFields.fixedFirstName2')
                   lx-text-field.black(label='Last name', fixed-label='true')
-                    input(type='text', ng-model='textFields.fixedLastName2')
+                    input.black(type='text', ng-model='textFields.fixedLastName2')
                   lx-text-field.black(label='Email', fixed-label='true')
-                    input(type='email', ng-model='textFields.fixedEmail2')
+                    input.black(type='email', ng-model='textFields.fixedEmail2')
                   lx-text-field.black(label='Click in Here to display matches', fixed-label='true')
-                    input(type='text', ng-model='textFields.fixedAdress2', ng-click='lastField=!lastField')
-          .bgc-white.topper.animate-show(flex-item='12', class='p+', ng-show='lastField')
-            .bgc-blue-500.center(flex-item='12', class='p+')
-              .mb  
-                button.btn.btn--m.btn--white.btn--raised.lendy(lx-ripple='', ng-click='lenderResults=!lenderResults') Find My Lendy
-          .bgc-red-200.topper.animate-show(flex-container='row', class='p+', ng-show='lenderResults')
-            div(flex-item='4') Lendy 1            
-            div(flex-item='4') Lendy 2
-            div(flex-item='4') Lendy 3
-          .bgc-green-500.topper.animate-show(3flex-container='row', class='p+',)
-            button.btn.btn--m.btn--white.btn--raised.steps(lx-ripple='') Step 1
-            button.btn.btn--m.btn--white.btn--raised.steps(lx-ripple='') Step 2
-            button.btn.btn--m.btn--white.btn--raised.steps(lx-ripple='') Step 3
+                    input.black(type='text', ng-model='textFields.fixedAdress2', ng-click='lastField=!lastField')
+        .bgc-white.topper.animate-show(flex-item='12', class='p+', ng-show='lastField')
+          .bgc-blue-500.center(flex-item='12', class='p+')
+            .mb  
+              button.btn.btn--m.btn--white.btn--raised.lendy(lx-ripple='', ng-click='lenderResults=!lenderResults') Find My Lendy
+      .bgc-red-200.topper.animate-show(flex-container='row', class='p+', ng-show='lenderResults')
+        div(flex-item='4') Lendy 1            
+        div(flex-item='4') Lendy 2
+        div(flex-item='4') Lendy 3
+      .bgc-green-500.topper.animate-show(3flex-container='row', class='p+',)
+        button.btn.btn--m.btn--white.btn--raised.steps(lx-ripple='') Step 1
+        button.btn.btn--m.btn--white.btn--raised.steps(lx-ripple='') Step 2
+        button.btn.btn--m.btn--white.btn--raised.steps(lx-ripple='') Step 3
+  
+  script(src='javascripts/jquery.scrollTo.js')
+  script(src='javascripts/jquery.localScroll.js')
 
-  script(src='bower_components/jquery/dist/jquery.js')
-  script(src='bower_components/velocity/velocity.js')
-  script(src='bower_components/moment/min/moment-with-locales.js')
-  script(src='bower_components/angular/angular.js')
-  script(src='bower_components/angular-animate/angular-animate.js')
-  script(src='bower_components/lumx/dist/lumx.js')
-  script(src='javascripts/app.js')
+  script.
+    $(document).ready(function() {
+      $('#somethingElse').localScroll({duration:1900});
+    });
+  script.
+    $(document).ready(function() {
+      $('#getStarted').localScroll({duration:1900});
+    });
+  script.
+    $(document).ready(function() {
+      $('#div3').localScroll({duration:1900});
+    });

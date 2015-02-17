@@ -1,3 +1,6 @@
+.clear {
+  clear: both;
+}
 .bodywrapper {
   height: 3000px;
   width: 100%;
@@ -47,6 +50,13 @@
   border: none;
   padding: 0 !important;
 }
+.bgc-white.topper.animate-show.clear#formDiv {
+  padding: 60px 0 0 0 !important;
+  height: auto;
+}
+.bgc-white.topper.animate-show#formbottom {
+  padding: 0 0 60px 0 !important;
+}
 .bgc-blue-500.center {
   text-align: center;
 }
@@ -64,6 +74,11 @@
 }
 h1.topper {
   margin: 22.5% 0 0 0;
+}
+@media screen and (max-width: 480px) {
+  h1.topper {
+    margin: 75% 0 0 0;
+  }
 }
 span.toolbar__label.fs-title {
   color: #000;
@@ -91,6 +106,9 @@ button.btn.btn--l.btn--black.btn--icon.formy {
 .text-field__label {
   color: #000 !important;
 }
+input.black {
+  color: #000 !important;
+}
 span.toolbar__label.fs-title.center {
   text-align: center;
 }
@@ -105,14 +123,35 @@ span.toolbar__label.fs-title.center {
   padding: 10px;
   border: 1px solid #000;
   background: #fff;
+  height: auto;
 }
-.animate-show.ng-hide-add.ng-hide-add-active,
-.animate-show.ng-hide-remove.ng-hide-remove-active {
+.ng-hide-add.ng-hide-add-active,
+.ng-hide-remove.ng-hide-remove-active {
   -webkit-transition: all linear 0.5s;
   transition: all linear 0.5s;
+  display: block !important;
 }
 .animate-show.ng-hide {
   line-height: 0;
   opacity: 0;
   padding: 0 10px;
+}
+.cssSlideUp {
+  transition: 0.7s linear all;
+  height: 200px;
+  overflow: hidden;
+}
+.cssSlideUp.ng-hide {
+  height: 0;
+}
+.formWrapper {
+  height: auto;
+  width: auto;
+  overflow: auto;
+  background-color: #fff;
+}
+@media screen and (min-width: 1920px) {
+  .formWrapper {
+    height: 42.5%;
+  }
 }
