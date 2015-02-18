@@ -23,7 +23,7 @@ block content
     .tc-white-1.mainContent#goForth(flex-container='column', flex-item='12', role='navigation')
       .bgc-green-500.topper#somethingElse(class='p+')
         .bgc-light-blue-A200.mask(class='p+')
-          h1.topper Hello, welcome to Leandevor. We match small businesses with the right loans.
+          h1.topper Hello, welcome to Brand Name. We match small businesses with the right loans.
           a(href='#getStarted')
             i.icon.icon--l.icon--white.icon--flat.mdi.mdi-chevron-down#topSlideer
       .bgc-blue-500.topper#getStarted(class='p+')
@@ -73,32 +73,32 @@ block content
                     i.mdi.mdi-minus(ng-show='section2')
               .cssSlideUp(ng-show='section2')  
                 form
-                  lx-text-field.black(label='First name', fixed-label='true')
+                  lx-text-field.black(label='Company name', fixed-label='true')
                     input.black(type='text', ng-model='textFields.fixedFirstName1')
-                  lx-text-field.black(label='Last name', fixed-label='true')
+                  lx-text-field.black(label='Company zip', fixed-label='true')
                     input.black(type='text', ng-model='textFields.fixedLastName1')
-                  lx-text-field.black(label='Email', fixed-label='true')
+                  lx-text-field.black(label='Revenue', fixed-label='true')
                     input.black(type='email', ng-model='textFields.fixedEmail1')
-                  lx-text-field.black(label='Address', fixed-label='true')
+                  lx-text-field.black(label='Entity Structure', fixed-label='true')
                     input.black(type='text', ng-model='textFields.fixedAdress1')
         .bgc-white.topper.animate-show.formdiv#formbottom(flex-container='row', class='p+')
           .bgc-white(flex-container='row', flex-item='12', class='p+')
             div(flex-item='12')
               .toolbar        
-                span.toolbar__label.fs-title.former Other Info
+                span.toolbar__label.fs-title.former Loan Info
                 .toolbar__right
                   button.btn.btn--l.btn--black.btn--icon.formy(lx-ripple='', ng-click='section3=!section3')
                     i.mdi.mdi-plus(ng-hide='section3')
                     i.mdi.mdi-minus(ng-show='section3')
               .cssSlideUp(ng-show='section3')  
                 form
-                  lx-text-field.black(label='First name', fixed-label='true')
+                  lx-text-field.black(label='Amount', fixed-label='true')
                     input.black(type='text', ng-model='textFields.fixedFirstName2')
-                  lx-text-field.black(label='Last name', fixed-label='true')
+                  lx-text-field.black(label='Purpose of capital', fixed-label='true')
                     input.black(type='text', ng-model='textFields.fixedLastName2')
-                  lx-text-field.black(label='Email', fixed-label='true')
+                  lx-text-field.black(label='Desired Term', fixed-label='true')
                     input.black(type='email', ng-model='textFields.fixedEmail2')
-                  lx-text-field.black(label='Click in Here to display matches', fixed-label='true')
+                  lx-text-field.black(label='Down payment', fixed-label='true')
                     input.black(type='text', ng-model='textFields.fixedAdress2')
         .bgc-white.topper.animate-show(flex-item='12', class='p+')
           .bgc-white.center(flex-item='12', class='p+')
