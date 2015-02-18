@@ -2,7 +2,7 @@ extends layout
 
 block content
   .bodywrapper
-    .card.bgc-green-500.top
+    .card.top
         .toolbar        
           span.toolbar__label.fs-title Brand Name
           .toolbar__right
@@ -19,14 +19,13 @@ block content
                     a.dropdown-link Something else here
                   li.dropdown-divider
                   li
-                    a.dropdown-link.dropdown-link--is-header Header
-                  li
                     a.dropdown-link Separated link
     .tc-white-1.mainContent(flex-container='column', flex-item='12', role='navigation')
       .bgc-green-500.topper#somethingElse(class='p+')
-        h1.topper Hello, welcome to Leandevor. We match small business with the right loans.
-        a(href='#getStarted')
-          i.icon.icon--l.icon--white.icon--flat.mdi.mdi-chevron-down#topSlideer
+        .bgc-light-blue-A200.mask(class='p+')
+          h1.topper Hello, welcome to Leandevor. We match small business with the right loans.
+          a(href='#getStarted')
+            i.icon.icon--l.icon--white.icon--flat.mdi.mdi-chevron-down#topSlideer
       .bgc-blue-500.topper#getStarted(class='p+')
         h1.topper2 You are a <span style="text-decoration:underline;">florist</span>
         h1.mid Looking to borrow <span style="text-decoration:underline;">$5000</span>
