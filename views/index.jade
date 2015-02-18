@@ -7,7 +7,7 @@ block content
           span.toolbar__label.fs-title Brand Name
           .toolbar__right
             lx-dropdown(position='right', from-top='')
-              button.btn.btn--l.btn--white.btn--icon(lx-ripple='', lx-dropdown-toggle='')
+              button.btn.btn--l.btn--black.btn--icon(lx-ripple='', lx-dropdown-toggle='')
                 i.mdi.mdi-menu
               lx-dropdown-menu
                 ul
@@ -20,10 +20,10 @@ block content
                   li.dropdown-divider
                   li
                     a.dropdown-link Separated link
-    .tc-white-1.mainContent(flex-container='column', flex-item='12', role='navigation')
+    .tc-white-1.mainContent#goForth(flex-container='column', flex-item='12', role='navigation')
       .bgc-green-500.topper#somethingElse(class='p+')
         .bgc-light-blue-A200.mask(class='p+')
-          h1.topper Hello, welcome to Leandevor. We match small business with the right loans.
+          h1.topper Hello, welcome to Leandevor. We match small businesses with the right loans.
           a(href='#getStarted')
             i.icon.icon--l.icon--white.icon--flat.mdi.mdi-chevron-down#topSlideer
       .bgc-blue-500.topper#getStarted(class='p+')
@@ -32,10 +32,16 @@ block content
         h1.mid For <span style="text-decoration:underline;">expansion</span>
         a#lefty(href='#formDiv', data-id='div2')
           button.btn.btn--xl.btn--blue--500.btn--raised.findLender(lx-ripple='', ng-click='clicked=!clicked') Get Started
-      .bgc-green-500.topper.animate-show#learnMore(3flex-container='row', class='p+',)
-        button.btn.btn--m.btn--white.btn--raised.steps(lx-ripple='') Step 1
-        button.btn.btn--m.btn--white.btn--raised.steps(lx-ripple='') Step 2
-        button.btn.btn--m.btn--white.btn--raised.steps(lx-ripple='') Step 3
+      .bgc-white.topper.animate-show#learnMore(flex-container='row', class='p+',)
+        div.icons(flex-item='4', flex-item-order='1') Step 1
+          img.icons1(src='/images/talk.png')
+          p.icons let’s talk about your business: answer a few questiona and create an account to save your progress 
+        div.icons(flex-item='4', flex-item-order='2') Step 2
+          img.icons(src='/images/check.png')
+          p.icons Compare your lenders: lenadeavor will match you with lenders that are th ebest fo for your business
+        div.icons(flex-item='4', flex-item-order='3') Step 3
+          img.icons(src='/images/docs.png')
+          p.icons Choose your lender, upload your documents and get your money      
       .formWrapper.clear(ng-show='clicked')
         .bgc-white.topper.animate-show.clear#formDiv(flex-container='row', class='p+')
           .bgc-white(flex-container='row', flex-item='12', class='p+')
@@ -56,7 +62,7 @@ block content
                     input.black(type='email', ng-model='textFields.fixedEmail1')
                   lx-text-field.black(label='Address', fixed-label='true')
                     input.black(type='text', ng-model='textFields.fixedAdress1')
-        .bgc-white.topper.animate-show(flex-container='row', class='p+')
+        .bgc-white.topper.animate-show.formdiv(flex-container='row', class='p+')
           .bgc-white(flex-container='row', flex-item='12', class='p+')  
             div(flex-item='12')
               .toolbar        
@@ -75,7 +81,7 @@ block content
                     input.black(type='email', ng-model='textFields.fixedEmail')
                   lx-text-field.black(label='Location', fixed-label='true', icon='city')
                     input.black(type='text', ng-model='textFields.fixedAdress')
-        .bgc-white.topper.animate-show#formbottom(flex-container='row', class='p+')
+        .bgc-white.topper.animate-show.formdiv#formbottom(flex-container='row', class='p+')
           .bgc-white(flex-container='row', flex-item='12', class='p+')
             div(flex-item='12')
               .toolbar        
@@ -96,14 +102,17 @@ block content
                     input.black(type='text', ng-model='textFields.fixedAdress2')
         .bgc-white.topper.animate-show(flex-item='12', class='p+')
           .bgc-white.center(flex-item='12', class='p+')
-            .mb  
+            a.mba(href='#lenderResults')  
               button.btn.btn--m.btn--blue.btn--raised.lendy(lx-ripple='', ng-click='lenderResults=!lenderResults') Find My Lendy
-      .cssSlideUp(ng-show='lenderResults', ng-cloak='')
+      .cssSlideUp#lenderResults(ng-show='lenderResults', ng-cloak='')
         .bgc-red-200.topper.animate-show(flex-container='row', class='p+')
-          div(flex-item='4') Lendy 1            
-          div(flex-item='4') Lendy 2
-          div(flex-item='4') Lendy 3
-  
+          div.lendy(flex-item='4') Lendy 1            
+          div.lendy(flex-item='4') Lendy 2
+          div.lendy(flex-item='4') Lendy 3
+      .bgc-green-500.topper
+      .bgc-green-A400.topper.animate-show
+        div.videoWrapper(flex-item='4', flex-item-order='1')
+          iframe.embeder(width='560', height='315', src='https://www.youtube.com/embed/kIrKHbzmW4w', frameborder='0', allowfullscreen='')
   script(src='javascripts/jquery.scrollTo.js')
   script(src='javascripts/jquery.localScroll.js')
 
