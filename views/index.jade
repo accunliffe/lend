@@ -24,13 +24,19 @@ block content
                     a.dropdown-link Separated link
     .tc-white-1.mainContent(flex-container='column', flex-item='12', role='navigation')
       .bgc-green-500.topper#somethingElse(class='p+')
-        h1.topper Paring business with loans
-        a(href='#getStarted', data-id='div1')
-          button.btn.btn--xl.btn--white.btn--raised.findLender(lx-ripple='') Learn More
+        h1.topper Hello, welcome to Leandevor. We match small business with the right loans.
+        a(href='#getStarted')
+          i.icon.icon--l.icon--white.icon--flat.mdi.mdi-chevron-down#topSlideer
       .bgc-blue-500.topper#getStarted(class='p+')
-        h1.topper Hit "Get Started"
-        a(href='#formDiv', data-id='div2')
-          button.btn.btn--xl.btn--white.btn--raised.findLender(lx-ripple='', ng-click='clicked=!clicked') Get Started
+        h1.topper2 You are a <span style="text-decoration:underline;">florist</span>
+        h1.mid Looking to borrow <span style="text-decoration:underline;">$5000</span>
+        h1.mid For <span style="text-decoration:underline;">expansion</span>
+        a#lefty(href='#formDiv', data-id='div2')
+          button.btn.btn--xl.btn--blue--500.btn--raised.findLender(lx-ripple='', ng-click='clicked=!clicked') Get Started
+      .bgc-green-500.topper.animate-show#learnMore(3flex-container='row', class='p+',)
+        button.btn.btn--m.btn--white.btn--raised.steps(lx-ripple='') Step 1
+        button.btn.btn--m.btn--white.btn--raised.steps(lx-ripple='') Step 2
+        button.btn.btn--m.btn--white.btn--raised.steps(lx-ripple='') Step 3
       .formWrapper.clear(ng-show='clicked')
         .bgc-white.topper.animate-show.clear#formDiv(flex-container='row', class='p+')
           .bgc-white(flex-container='row', flex-item='12', class='p+')
@@ -98,10 +104,6 @@ block content
           div(flex-item='4') Lendy 1            
           div(flex-item='4') Lendy 2
           div(flex-item='4') Lendy 3
-      .bgc-green-500.topper.animate-show(3flex-container='row', class='p+',)
-        button.btn.btn--m.btn--white.btn--raised.steps(lx-ripple='') Step 1
-        button.btn.btn--m.btn--white.btn--raised.steps(lx-ripple='') Step 2
-        button.btn.btn--m.btn--white.btn--raised.steps(lx-ripple='') Step 3
   
   script(src='javascripts/jquery.scrollTo.js')
   script(src='javascripts/jquery.localScroll.js')
@@ -116,5 +118,5 @@ block content
     });
   script.
     $(document).ready(function() {
-      $('#div3').localScroll({duration:1900});
+      $('#goForth').localScroll({duration:1900});
     });
