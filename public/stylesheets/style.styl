@@ -34,7 +34,7 @@ a#lefty
   height auto
 
 .bgc-blue-500.topper
-  min-height auto
+  height auto
   @media screen and (min-width: 1920px)
     height 42.5%
   z-index 0
@@ -47,10 +47,14 @@ a#lefty
   z-index 0
   text-align center
   
-.bgc-green-A400.topper.animate-show
+.bgc-green-A400.topper
   height auto
+  min-height 400px
+  @media screen and (min-width: 1920px)
+    height 42.5%
   z-index 0
   text-align center
+  border none !important
 
 .bgc-green-500.topper#somethingElse
   min-height 700px
@@ -88,8 +92,9 @@ a#lefty
   border none
   padding 0 !important
   
-.bgc-white.topper.animate-show#learnMore
+.bgc-white.topper#learnMore
   text-align center
+  color black
   
 .formWrapper.clear
   text-align left !important
@@ -125,6 +130,7 @@ a#lefty
   
 h1
   width auto
+  
 
 h1.topper
   padding 15% 15% 0 15%
@@ -142,6 +148,13 @@ h1.mid
   margin 0 15% 0 35%
   @media screen and (max-width: 480px)
     margin 0 0 0 0
+    
+h1.lefty
+  float left
+  color white
+  margin 20px 20px 30px 20px
+  
+
 i.icon.icon--l.icon--white.icon--flat.mdi.mdi-chevron-down#topSlideer
   font-size 80px !important
   width auto !important
@@ -213,17 +226,26 @@ img.icons1
   max-width 100px
   max-height 100px
   
+img.righty
+  float right
+  @media screen and (max-width: 480px)
+    float left
+    max-width 90%
+  margin 20px 20px 30px 20px
+  
 p.icons
   margin 40px auto 40px auto
   text-align left
   padding 0 30px 0 30px
 
 div.videoWrapper
-  margin 50px auto 0 auto
+  padding 50px auto 50px auto
   max-width 100%
   
 iframe.embeder
   max-width 79%
+  margin 50px auto 50px auto
+  
   
 .animate-show
   line-height 20px
